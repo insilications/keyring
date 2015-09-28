@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 5.4
-Release  : 10
+Release  : 11
 URL      : https://pypi.python.org/packages/source/k/keyring/keyring-5.4.tar.gz
 Source0  : https://pypi.python.org/packages/source/k/keyring/keyring-5.4.tar.gz
 Summary  : Store and access your passwords safely.
