@@ -2,6 +2,21 @@
 CHANGES
 =======
 
+-----
+8.5.1
+-----
+
+* Pull Request #216: Kwallet backend now has lower
+  priority than the preferred SecretService backend,
+  now that the desktop check is no longer in place.
+
+---
+8.5
+---
+
+* Issue #168: Now prefer KF5 Kwallet to KF4. Users relying
+  on KF4 must use prior releases.
+
 ---
 8.4
 ---
