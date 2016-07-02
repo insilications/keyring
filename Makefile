@@ -1,5 +1,5 @@
 PKG_NAME := keyring
-URL := https://pypi.python.org/packages/source/k/keyring/keyring-9.0.tar.gz
+URL := http://pypi.debian.net/keyring/keyring-9.3.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common

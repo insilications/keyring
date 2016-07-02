@@ -1,6 +1,33 @@
 CHANGES
 =======
 
+9.3
+---
+
+* Pull Request #226: In SecretService backend, unlock
+  individual entries.
+
+9.2.1
+-----
+
+* Issue #230: Don't rely on dbus-python and instead
+  defer to SecretStorage to describe the installation
+  requirements.
+
+9.2
+---
+
+* Issue #231 via #233: On Linux, ``secretstorage``
+  is now a declared dependency, allowing recommended
+  keyring to work simply after installation.
+
+9.1
+---
+
+* Issue #83 via #229: ``kwallet`` backend now stores
+  the service name as a folder name in the backend rather
+  than storing all passwords in a Python folder.
+
 9.0
 ---
 
