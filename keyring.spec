@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 9.3.1
-Release  : 26
+Release  : 27
 URL      : http://pypi.debian.net/keyring/keyring-9.3.1.tar.gz
 Source0  : http://pypi.debian.net/keyring/keyring-9.3.1.tar.gz
 Summary  : Store and access your passwords safely.
