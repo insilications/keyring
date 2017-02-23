@@ -6,3 +6,4 @@ python-mock
 pycrypto-python
 pytest-runner-python
 python-keyczar-python
+secretstorage
