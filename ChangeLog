@@ -1,5 +1,53 @@
-CHANGES
-=======
+10.3.2
+------
+
+* #267: More leniently unescape lowercased characters as
+  they get re-cased by ConfigParser.
+
+10.3.1
+------
+
+* #266: Use private compatibity model rather than six to
+  avoid the dependency.
+
+10.3
+----
+
+* #264: Implement devpi hook for supplying a password when
+  logging in with `devpi <https://pypi.org/project/devpi>`_
+  client.
+
+* #260: For macOS, added initial API support for internet
+  passwords.
+
+10.2
+----
+
+* #259: Allow to set a custom application attribute for
+  SecretService backend.
+
+10.1
+----
+
+* #253: Backends now expose a '.name' attribute suitable
+  for identifying each backend to users.
+
+10.0.2
+-----
+
+* #247: Restored console script.
+
+10.0.1
+------
+
+* Update readme to reflect test recommendations.
+
+10.0
+----
+
+* Drop support for Python 3.2.
+* Test suite now uses tox instead of pytest-runner.
+  Test requirements are now defined in tests/requirements.txt.
 
 9.3.1
 -----
@@ -49,6 +97,9 @@ CHANGES
   users will be prompted to authorize the system Python
   executable and also new Python executables, such as
   those created by virtualenv.
+  #260: No longer does the keyring honor the ``store``
+  attribute on the keyring. Only application passwords
+  are accessible.
 
 8.7
 ---
