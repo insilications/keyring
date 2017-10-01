@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 10.4.0
-Release  : 37
+Release  : 38
 URL      : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Summary  : Store and access your passwords safely.
@@ -19,6 +19,7 @@ BuildRequires : fs-python
 BuildRequires : hgtools-python
 BuildRequires : pbr
 BuildRequires : pip
+BuildRequires : pluggy-python
 BuildRequires : pycrypto-python
 BuildRequires : pytest-runner-python
 BuildRequires : python-dev
@@ -77,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1506868551
+export SOURCE_DATE_EPOCH=1506869871
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -87,7 +88,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python setup.py ptr || :
 %install
-export SOURCE_DATE_EPOCH=1506868551
+export SOURCE_DATE_EPOCH=1506869871
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
