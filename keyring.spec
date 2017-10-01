@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 10.4.0
-Release  : 36
+Release  : 37
 URL      : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Summary  : Store and access your passwords safely.
@@ -12,9 +12,8 @@ Group    : Development/Tools
 License  : MIT Python-2.0
 Requires: keyring-bin
 Requires: keyring-legacypython
+Requires: keyring-python3
 Requires: keyring-python
-Requires: Sphinx
-Requires: pytest
 Requires: secretstorage
 BuildRequires : fs-python
 BuildRequires : hgtools-python
@@ -55,9 +54,18 @@ legacypython components for the keyring package.
 Summary: python components for the keyring package.
 Group: Default
 Requires: keyring-legacypython
+Requires: keyring-python3
 
 %description python
 python components for the keyring package.
+
+
+%package python3
+Summary: python3 components for the keyring package.
+Group: Default
+
+%description python3
+python3 components for the keyring package.
 
 
 %prep
@@ -69,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505004793
+export SOURCE_DATE_EPOCH=1506868551
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -79,7 +87,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python setup.py ptr || :
 %install
-export SOURCE_DATE_EPOCH=1505004793
+export SOURCE_DATE_EPOCH=1506868551
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -99,5 +107,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
