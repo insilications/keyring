@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 10.4.0
-Release  : 38
+Release  : 39
 URL      : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Summary  : Store and access your passwords safely.
@@ -46,6 +46,7 @@ bin components for the keyring package.
 %package legacypython
 Summary: legacypython components for the keyring package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the keyring package.
@@ -64,6 +65,7 @@ python components for the keyring package.
 %package python3
 Summary: python3 components for the keyring package.
 Group: Default
+Requires: python3-core
 
 %description python3
 python3 components for the keyring package.
@@ -78,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1506869871
+export SOURCE_DATE_EPOCH=1507155912
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -88,7 +90,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python setup.py ptr || :
 %install
-export SOURCE_DATE_EPOCH=1506869871
+export SOURCE_DATE_EPOCH=1507155912
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
