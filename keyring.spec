@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 10.4.0
-Release  : 39
+Release  : 40
 URL      : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-10.4.0.tar.gz
 Summary  : Store and access your passwords safely.
