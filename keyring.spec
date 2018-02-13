@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 10.5.1
-Release  : 44
+Release  : 45
 URL      : https://pypi.debian.net/keyring/keyring-10.5.1.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-10.5.1.tar.gz
 Summary  : Store and access your passwords safely.
@@ -15,15 +15,14 @@ Requires: keyring-legacypython
 Requires: keyring-python3
 Requires: keyring-python
 Requires: secretstorage
-BuildRequires : fs-python
-BuildRequires : hgtools-python
+BuildRequires : fs
+BuildRequires : hgtools
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy-python
-BuildRequires : pycrypto-python
-BuildRequires : pytest-runner-python
+BuildRequires : pycrypto
+BuildRequires : pytest-runner
 BuildRequires : python-dev
-BuildRequires : python-keyczar-python
+BuildRequires : python-keyczar
 BuildRequires : python-mock
 BuildRequires : python3-dev
 BuildRequires : secretstorage
@@ -55,7 +54,6 @@ legacypython components for the keyring package.
 %package python
 Summary: python components for the keyring package.
 Group: Default
-Requires: keyring-legacypython
 Requires: keyring-python3
 
 %description python
@@ -80,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1513371326
+export SOURCE_DATE_EPOCH=1518537624
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -90,7 +88,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python setup.py ptr || :
 %install
-export SOURCE_DATE_EPOCH=1513371326
+export SOURCE_DATE_EPOCH=1518537624
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
