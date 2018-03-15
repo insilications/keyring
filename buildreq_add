@@ -7,3 +7,4 @@ pycrypto
 pytest-runner
 python-keyczar
 secretstorage
+setuptools-legacypython
