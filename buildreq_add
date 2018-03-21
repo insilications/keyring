@@ -1,10 +1,4 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-fs
-hgtools
-python-mock
-pycrypto
-pytest-runner
-python-keyczar
-secretstorage
 setuptools-legacypython
+setuptools-python
