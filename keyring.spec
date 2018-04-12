@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 11.0.0
-Release  : 50
+Release  : 51
 URL      : https://pypi.debian.net/keyring/keyring-11.0.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-11.0.0.tar.gz
 Summary  : Store and access your passwords safely.
@@ -19,7 +19,6 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
 BuildRequires : setuptools_scm
 Patch1: requires.patch
@@ -63,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523290777
+export SOURCE_DATE_EPOCH=1523555847
 python3 setup.py build -b py3
 
 %check
