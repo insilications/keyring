@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 11.0.0
-Release  : 54
+Release  : 55
 URL      : https://pypi.debian.net/keyring/keyring-11.0.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-11.0.0.tar.gz
 Summary  : Store and access your passwords safely.
@@ -12,11 +12,11 @@ Group    : Development/Tools
 License  : MIT Python-2.0
 Requires: keyring-bin
 Requires: keyring-python3
+Requires: keyring-license
 Requires: keyring-python
 Requires: secretstorage
 BuildRequires : pbr
 BuildRequires : pip
-
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-python
@@ -30,9 +30,18 @@ Patch1: requires.patch
 %package bin
 Summary: bin components for the keyring package.
 Group: Binaries
+Requires: keyring-license
 
 %description bin
 bin components for the keyring package.
+
+
+%package license
+Summary: license components for the keyring package.
+Group: Default
+
+%description license
+license components for the keyring package.
 
 
 %package python
@@ -62,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523555847
+export SOURCE_DATE_EPOCH=1530375061
 python3 setup.py build -b py3
 
 %check
@@ -72,6 +81,8 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 python setup.py ptr || :
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/keyring
+cp LICENSE %{buildroot}/usr/share/doc/keyring/LICENSE
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -83,6 +94,10 @@ echo ----[ mark ]----
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/keyring
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/keyring/LICENSE
 
 %files python
 %defattr(-,root,root,-)
