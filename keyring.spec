@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 11.0.0
-Release  : 56
+Release  : 57
 URL      : https://pypi.debian.net/keyring/keyring-11.0.0.tar.gz
 Source0  : https://pypi.debian.net/keyring/keyring-11.0.0.tar.gz
 Summary  : Store and access your passwords safely.
