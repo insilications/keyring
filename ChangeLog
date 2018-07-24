@@ -1,3 +1,87 @@
+13.2.1
+------
+
+* #335: Fix regression in command line client.
+
+13.2.0
+------
+
+* Keyring command-line interface now reads the password
+  directly from stdin if stdin is connected to a pipe.
+
+13.1.0
+------
+
+* #329: Improve output of ``keyring --list-backends``.
+
+13.0.0
+------
+
+* #327: In kwallet backend, if the collection or item is
+  locked, a ``KeyringLocked`` exception is raised. Clients
+  expecting a None response from ``get_password`` under
+  this condition will need to catch this exception.
+  Additionally, an ``InitError`` is now raised if the
+  connection cannot be established to the DBus.
+
+* #298: In kwallet backend, when checking an existing
+  handle, verify that it is still valid or create a new
+  connection.
+
+12.2.1
+------
+
+* Fixed issue in SecretService. Ref #226.
+
+12.2.0
+------
+
+* #322: Fix AttributeError when ``escape.__builtins__``
+  is a dict.
+
+* Deprecated ``keyring.util.escape`` module. If you use
+  this module or encounter the warning (on the latest
+  release of your packages), please `file a ticket
+  <https://github.com/jaraco/keyring/issues/new>`_.
+
+12.1.0
+------
+
+* Unpin SecretStorage on Python 3.5+. Requires that
+  Setuptools 17.1 be used. Note that the special
+  handling will be unnecessary once Pip 9 can be
+  assumed (as it will exclude SecretStorage 3 in
+  non-viable environments).
+
+12.0.2
+------
+
+* Pin SecretStorage to 2.x.
+
+12.0.1
+------
+
+* #314: No changes except to rebuild.
+
+12.0.0
+------
+
+* #310: Keyring now loads all backends through entry
+  points.
+
+For most users, this release will be fully compatible. Some
+users may experience compatibility issues if entrypoints is
+not installed (as declared) or the metadata on which entrypoints
+relies is unavailable. For that reason, the package is released
+with a major version bump.
+
+11.1.0
+------
+
+* #312: Use ``entrypoints`` instead of pkg_resources to
+  avoid performance hit loading pkg_resources. Adds
+  a dependency on ``entrypoints``.
+
 11.0.0
 ------
 
