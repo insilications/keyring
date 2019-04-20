@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 15.2.0
-Release  : 62
+Release  : 63
 URL      : https://files.pythonhosted.org/packages/29/3e/87b1f121e369e8772ccfa231da1e91dc308f0278a92a30f1a74ce77e1953/keyring-15.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/29/3e/87b1f121e369e8772ccfa231da1e91dc308f0278a92a30f1a74ce77e1953/keyring-15.2.0.tar.gz
 Summary  : Store and access your passwords safely.
