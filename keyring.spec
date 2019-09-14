@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 19.2.0
-Release  : 68
+Release  : 69
 URL      : https://files.pythonhosted.org/packages/ee/46/77fdb7cd2b0f1f684afbc35a59b3d7ebb6961fe528f97b86900002968914/keyring-19.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/46/77fdb7cd2b0f1f684afbc35a59b3d7ebb6961fe528f97b86900002968914/keyring-19.2.0.tar.gz
 Summary  : Store and access your passwords safely.
