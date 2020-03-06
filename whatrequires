@@ -2,4 +2,5 @@
 conda
 mercurial
 spyder-ide
+twine
 wheel
