@@ -4,7 +4,7 @@
 #
 Name     : keyring
 Version  : 21.2.1
-Release  : 80
+Release  : 81
 URL      : https://files.pythonhosted.org/packages/a6/52/eb8a0e13b54ec9240c7dd68fcd0951c52f62033d438af372831af770f7cc/keyring-21.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a6/52/eb8a0e13b54ec9240c7dd68fcd0951c52f62033d438af372831af770f7cc/keyring-21.2.1.tar.gz
 Summary  : Store and access your passwords safely.
